@@ -16969,7 +16969,7 @@ PERFORMANCE OF THIS SOFTWARE.
         for (let elm of animation_scroll_elements) observer.observe(elm);
         document.addEventListener("DOMContentLoaded", (() => {
             const this_data = new Date;
-            this_data.setDate(this_data.getDate() + 6);
+            this_data.setDate(this_data.getDate() + 7);
             console.log(this_data);
             const daysVal = document.querySelector(".time-count__days .time-count__val");
             const hoursVal = document.querySelector(".time-count__hours .time-count__val");
