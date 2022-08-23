@@ -19874,7 +19874,6 @@ PERFORMANCE OF THIS SOFTWARE.
             observer: true,
             observeParents: true,
             observeSlideChildren: true,
-            freeMode: true,
             loop: true,
             slideToClickedSlide: true,
             autoplay: {
