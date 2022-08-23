@@ -1973,6 +1973,11 @@ th {
   overflow: hidden;
   background: #ffffff;
   border: 1px solid #71a6dc;
+  -webkit-transition: -webkit-transform all 0.8s ease 0s;
+  transition: -webkit-transform all 0.8s ease 0s;
+  -o-transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s, -webkit-transform all 0.8s ease 0s;
 }
 
 .game-card__body:before {
@@ -1982,6 +1987,11 @@ th {
   width: 100%;
   height: 0;
   background: #3a3a3a;
+  -webkit-transition: -webkit-transform all 0.8s ease 0s;
+  transition: -webkit-transform all 0.8s ease 0s;
+  -o-transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s, -webkit-transform all 0.8s ease 0s;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -1993,10 +2003,20 @@ th {
 
 .game-card__body:hover:before {
   height: 50px;
+  -webkit-transition: -webkit-transform all 0.8s ease 0s;
+  transition: -webkit-transform all 0.8s ease 0s;
+  -o-transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s, -webkit-transform all 0.8s ease 0s;
 }
 
 .game-card__body:hover .game-card__social {
   margin-top: 40px;
+  -webkit-transition: -webkit-transform all 0.8s ease 0s;
+  transition: -webkit-transform all 0.8s ease 0s;
+  -o-transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s, -webkit-transform all 0.8s ease 0s;
 }
 
 .game-card__body:hover .game-card__time {
@@ -2004,6 +2024,11 @@ th {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-transition: -webkit-transform all 0.8s ease 0s;
+  transition: -webkit-transform all 0.8s ease 0s;
+  -o-transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s, -webkit-transform all 0.8s ease 0s;
 }
 
 .game-card__body:hover .game-card__date,
@@ -2019,15 +2044,20 @@ th {
   height: 2.5rem;
   left: calc(50% - 20px);
   opacity: 0;
+  -webkit-transition: -webkit-transform all 0.8s ease 0s;
+  transition: -webkit-transform all 0.8s ease 0s;
+  -o-transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s, -webkit-transform all 0.8s ease 0s;
 }
 
 .game-card__body:hover .game-card__btn {
   background-color: #3a3a3a;
-  -webkit-transition: -webkit-transform 0.5s ease 0s;
-  transition: -webkit-transform 0.5s ease 0s;
-  -o-transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+  -webkit-transition: -webkit-transform all 0.8s ease 0s;
+  transition: -webkit-transform all 0.8s ease 0s;
+  -o-transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s;
+  transition: transform all 0.8s ease 0s, -webkit-transform all 0.8s ease 0s;
 }
 
 .game-card__time {
@@ -2225,6 +2255,52 @@ th {
   border: 0.0625rem solid #ffffff;
   bottom: -70px;
   left: calc(50% - 190px);
+  -webkit-transition: -webkit-transform all 0.5s ease 0s;
+  transition: -webkit-transform all 0.5s ease 0s;
+  -o-transition: transform all 0.5s ease 0s;
+  transition: transform all 0.5s ease 0s;
+  transition: transform all 0.5s ease 0s, -webkit-transform all 0.5s ease 0s;
+}
+
+.calendar-slider__partner {
+  position: absolute;
+  right: 0;
+}
+
+@supports (top: clamp( -12.5rem , -3.90625rem  +  -8.59375vw , -5.625rem )) {
+  .calendar-slider__partner {
+    top: clamp( -12.5rem , -3.90625rem  +  -8.59375vw , -5.625rem );
+  }
+}
+
+@supports not (top: clamp( -12.5rem , -3.90625rem  +  -8.59375vw , -5.625rem )) {
+  .calendar-slider__partner {
+    top: calc(-5.625rem + -6.875 * (100vw - 20rem) / 80);
+  }
+}
+
+@supports (width: clamp( 5rem , 1.8125rem  +  15.9375vw , 17.75rem )) {
+  .calendar-slider__partner {
+    width: clamp( 5rem , 1.8125rem  +  15.9375vw , 17.75rem );
+  }
+}
+
+@supports not (width: clamp( 5rem , 1.8125rem  +  15.9375vw , 17.75rem )) {
+  .calendar-slider__partner {
+    width: calc(5rem + 12.75 * (100vw - 20rem) / 80);
+  }
+}
+
+@supports (height: clamp( 3.125rem , 1.125rem  +  10vw , 11.125rem )) {
+  .calendar-slider__partner {
+    height: clamp( 3.125rem , 1.125rem  +  10vw , 11.125rem );
+  }
+}
+
+@supports not (height: clamp( 3.125rem , 1.125rem  +  10vw , 11.125rem )) {
+  .calendar-slider__partner {
+    height: calc(3.125rem + 8 * (100vw - 20rem) / 80);
+  }
 }
 
 .calendar-slider__item {
@@ -2819,6 +2895,112 @@ th {
   transition: all 0.5s ease 0s;
 }
 
+.header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header__form {
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.header__form-select-lang {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0px 0px 0px 1.875rem;
+  color: #ffffff;
+  padding: 0.3125rem 0px;
+  letter-spacing: 0.1875rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border-radius: 0.1875rem;
+  z-index: 3;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.header._header-scroll .header__form-select-lang {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.header__search-form {
+  height: 2.5rem;
+  margin: 0px 30px 0px 0px;
+  z-index: 2;
+  border: 0.0625rem solid #ffffff;
+  border-radius: 0.1875rem;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  overflow: hidden;
+}
+
+@supports (width: clamp( 15rem , 0.9283781783rem  +  22.6966218217vw , 23.625rem )) {
+  .header__search-form {
+    width: clamp( 15rem , 0.9283781783rem  +  22.6966218217vw , 23.625rem );
+  }
+}
+
+@supports not (width: clamp( 15rem , 0.9283781783rem  +  22.6966218217vw , 23.625rem )) {
+  .header__search-form {
+    width: calc(15rem + 8.625 * (100vw - 61.99875rem) / 38.00125);
+  }
+}
+
+.header._header-scroll .header__search-form {
+  height: 0px;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.header__search-form-btn-box {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 8px 10px 12px 10px;
+  background-color: #71a6dc;
+}
+
+.header__search-form-item {
+  height: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__search-form-btn-1 {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.header__search-form-input {
+  height: 2.5rem;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  padding: 0px 20px 0px 20px;
+}
+
 .header__icons {
   position: relative;
   z-index: 2;
@@ -2836,6 +3018,9 @@ th {
           justify-content: end;
   height: 5rem;
   width: 100%;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 .header._header-scroll .header__icons-list {
@@ -2848,6 +3033,9 @@ th {
 .header__icons-item {
   cursor: pointer;
   z-index: 5;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 @supports (margin: clamp( 0.625rem , 0.3125rem  +  1.25vw , 0.9375rem )) {
@@ -5155,6 +5343,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
+@media (min-width: 61.99875em) {
+  .header._header-scroll .header__form {
+    height: 0px;
+    -webkit-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+  }
+
+  .header._header-scroll .header__form-select-lang {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: all 0s ease 0s;
+    -o-transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
+  }
+}
+
 @media (min-width: 42em) {
   :root {
     --width: 42rem;
@@ -5525,6 +5731,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .header__body {
     height: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
   }
 
   .header__logo {
@@ -5536,6 +5751,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .header__top {
     display: none;
+  }
+
+  .header__form-select-lang {
+    margin: 0px 3.75rem 0px 0px;
   }
 
   .header__icons {
@@ -5551,7 +5770,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .header__menu-burger {
     position: absolute;
-    right: 1.25rem;
     top: 1.875rem;
   }
 
@@ -5892,18 +6110,23 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .game-card__body:hover {
     -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    -webkit-transition: -webkit-transform all 0.8s ease 0s;
+    transition: -webkit-transform all 0.8s ease 0s;
+    -o-transition: transform all 0.8s ease 0s;
+    transition: transform all 0.8s ease 0s;
+    transition: transform all 0.8s ease 0s, -webkit-transform all 0.8s ease 0s;
   }
 
   .calendar-slider__btn:hover {
-    background-color: #690031;
+    background-color: #cc0202;
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
             transform: scale(1.2);
-    -webkit-transition: -webkit-transform 0.5s ease 0s;
-    transition: -webkit-transform 0.5s ease 0s;
-    -o-transition: transform 0.5s ease 0s;
-    transition: transform 0.5s ease 0s;
-    transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+    -webkit-transition: -webkit-transform all 0.5s ease 0s;
+    transition: -webkit-transform all 0.5s ease 0s;
+    -o-transition: transform all 0.5s ease 0s;
+    transition: transform all 0.5s ease 0s;
+    transition: transform all 0.5s ease 0s, -webkit-transform all 0.5s ease 0s;
   }
 
   .header__icons-item:hover {
