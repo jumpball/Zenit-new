@@ -20024,10 +20024,6 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
             }
         });
-        document.querySelector(".table-scroll").addEventListener("scroll", (function(e) {
-            this.querySelector(".thead-col").style.left = this.scrollLeft + "px";
-            this.querySelector(".thead-row").style.top = this.scrollTop + "px";
-        }));
         function onEntry(entry) {
             entry.forEach((change => {
                 if (change.isIntersecting) change.target.classList.add("element-show"); else change.target.classList.remove("element-show");
