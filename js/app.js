@@ -20070,6 +20070,110 @@ PERFORMANCE OF THIS SOFTWARE.
             timeCount();
             setInterval(timeCount, 1e3);
         }));
+        const $jsChart1 = document.querySelector("#jsChart1");
+        const jsChart1Y = {
+            labels: "% 2-х очковых",
+            data: [ 55.6, 44.4 ],
+            borderColor: "rgba(255, 255, 255, 1)",
+            borderWidth: 2,
+            backgroundColor: [ "rgb(255, 205, 86)", "#ffffff" ],
+            hoverOffset: 5
+        };
+        if ($jsChart1) new Chart($jsChart1, {
+            type: "doughnut",
+            data: {
+                datasets: [ jsChart1Y ]
+            },
+            options: {
+                scales: {
+                    yAxes: [ {
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    } ]
+                }
+            }
+        });
+        const $jsChart2 = document.querySelector("#jsChart2");
+        const jsChart2Y = {
+            labels: "% 3-х очковых",
+            data: [ 37.9, 62.1 ],
+            borderColor: "rgba(255, 255, 255, 1)",
+            borderWidth: 2,
+            backgroundColor: [ "rgb(255, 205, 86)", "#ffffff" ],
+            hoverOffset: 5
+        };
+        if ($jsChart2) new Chart($jsChart2, {
+            type: "doughnut",
+            data: {
+                datasets: [ jsChart2Y ]
+            },
+            options: {
+                scales: {
+                    yAxes: [ {
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    } ]
+                }
+            }
+        });
+        const $jsChart3 = document.querySelector("#jsChart3");
+        const jsChart3Y = {
+            labels: "% штрафных",
+            data: [ 79.5, 21.5 ],
+            borderColor: "rgba(255, 255, 255, 1)",
+            borderWidth: 2,
+            backgroundColor: [ "rgb(255, 205, 86)", "#ffffff" ],
+            hoverOffset: 5
+        };
+        if ($jsChart3) new Chart($jsChart3, {
+            type: "doughnut",
+            data: {
+                datasets: [ jsChart3Y ]
+            },
+            options: {
+                scales: {
+                    yAxes: [ {
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    } ]
+                }
+            }
+        });
+        const $box = document.querySelector("#box");
+        const boxX = [ "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" ];
+        const boxY1 = {
+            label: "% 2-х очковых",
+            data: [ 55.6, 32.8, 55.6, 0, 35.6, 0, 52.6, 41.8, 20.6, 0, 12.3, 42.8 ],
+            backgroundColor: "#ccae61",
+            borderColor: "rgba(255, 255, 255, 1)",
+            borderWidth: 1
+        };
+        const boxY2 = {
+            label: "% 3-х очковых",
+            data: [ 35.6, 42.8, 35.6, 22.8, 45.6, 23.8, 0, 21.8, 50.6, 30.8, 0, 22.8 ],
+            backgroundColor: "#146eb4",
+            borderColor: "rgba(255, 255, 255, 1)",
+            borderWidth: 1
+        };
+        if ($box) new Chart($box, {
+            type: "bar",
+            data: {
+                labels: boxX,
+                datasets: [ boxY1, boxY2 ]
+            },
+            options: {
+                scales: {
+                    yAxes: [ {
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    } ]
+                }
+            }
+        });
         window["FLS"] = true;
         isWebp();
         addTouchClass();
