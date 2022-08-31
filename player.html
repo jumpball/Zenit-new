@@ -7,8 +7,8 @@
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20220831035241">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220831035241">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20220901020532">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220901020532">
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
@@ -102,7 +102,7 @@
 		</header>
 		<main class="page">
 
-
+			<!-- BREADCRUMS -->
 			<div class="section__container">
 				<ul class="page__breadcrumb">
 					<li><a href="#">Главная</a></li>
@@ -112,10 +112,9 @@
 				</ul>
 			</div>
 
-
+			<!-- PROFILE HEADER -->
 			<section class="profile__section section-offset">
 				<div class="section__container">
-
 					<div class="profile-header">
 						<div class="profile-header__body">
 							<img class="profile-header__bg-logo" src="img/logo/Zenit-logo-bc-tr.svg" alt="">
@@ -146,11 +145,13 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- PROFILE BODY -->
 				<div class="profile-body diagonal-box bg-one">
 					<div class="section__container content__box">
-						<div class="profile-body__text">
-						</div>
+
 						<div data-tabs="1160" data-tabs-animate="1000" class="tabs tab__block profile-body__tabs">
+							<!-- PROFILE MENU TABS -->
 							<nav data-tabs-titles class="tabs__navigation tab__nav team-roster__nav">
 								<button type="button" class="tab__title-w-1 _tab-active">
 									<span id="#tab_1" data-tab="tab_1" class="b-nav-tab tab__link-w-1 active">
@@ -181,9 +182,57 @@
 								</button>
 
 							</nav>
+							<div class="profile-body__text"></div>
 							<div data-tabs-body class="tabs__content tab__content">
+								<!-- PROFILE STATS -->
 								<div id="tab_1" class="tabs__body tab__body team-roster__tab-body b-tab active">
 									<h2 class="section-title-h2w element-animation">статистика</h2>
+
+									<div data-spollers="650,max" class="person-stats-chart__spollers">
+										<div class="person-stats-chart__spollers-item">
+											<button type="button" data-spoller class="person-stats-chart__spollers-title"></button>
+											<div class="person-stats-chart__spollers-body">
+												<div class="person-stats__nav">
+													<form action="#" class="person-stats__form">
+														<div class="person-stats__box">
+															<label class="person-stats__label" for="select-season-1">выбрать
+																сезон</label>
+															<select data-label data-scroll data-show name="form[]" id="select-season-1" class="person-stats__list">
+																<option class="person-stats__item" value="1" selected="selected">
+																	все сезоны</option>
+																<option class="person-stats__item" value="2">2021/2022</option>
+																<option class="person-stats__item" value="3">2020/2021</option>
+																<option class="person-stats__item" value="4">2019/2020</option>
+																<option class="person-stats__item" value="5">2018/2019</option>
+															</select>
+														</div>
+														<div class="person-stats__box">
+															<label class="person-stats__label" for="select-tournament-1">выбрать
+																турнир</label>
+															<select data-label data-scroll data-show name="form[]" id="select-tournament-1" class="person-stats__list">
+																<option class="person-stats__item" value="1" selected="selected">все
+																	турниры</option>
+																<option class="person-stats__item" value="2">Единая Лига ВТБ</option>
+																<option class="person-stats__item" value="3">Евролига</option>
+
+															</select>
+														</div>
+														<div class="person-stats__box">
+															<label class="person-stats__label" for="type-stats-1">тип
+																статистики</label>
+															<select data-label data-scroll data-show name="form[]" id="type-stats-1" class="person-stats__list">
+																<option class="person-stats__item" value="1" selected="selected">в
+																	среднем</option>
+																<option data-label class="person-stats__item" value="2">всего</option>
+															</select>
+														</div>
+
+													</form>
+
+												</div>
+											</div>
+										</div>
+									</div>
 									<div data-showmore class="block">
 										<div data-showmore-content="370" class="block__content">
 											<div class="table__wrapper table__wrapper-dark">
@@ -443,6 +492,7 @@
 
 
 								</div>
+								<!-- PROFILE SHOTING MAP -->
 								<div id="tab_2" class="tabs__body tab__body team-roster__tab-body b-tab">
 									<h2 class="section-title-h2w element-animation">Карта бросков</h2>
 
@@ -531,12 +581,11 @@
 											<img src="img/court/basketball-court-h.svg" alt="">
 										</div>
 
-										<div data-spollers="520,max" class="person-stats-chart__spollers">
+										<div data-spollers="410,max" class="person-stats-chart__spollers">
 											<div class="person-stats-chart__spollers-item">
 												<button type="button" data-spoller class="person-stats-chart__spollers-title"></button>
 												<div class="person-stats-chart__spollers-body">
 													<div class="person-stats-chart__content">
-
 														<div class="person-stats-chart__list">
 															<div class="person-stats-chart__item">
 																<canvas id="jsChart1"></canvas>
@@ -562,11 +611,7 @@
 															</div>
 
 														</div>
-
-
-
 													</div>
-
 												</div>
 											</div>
 										</div>
@@ -574,8 +619,46 @@
 											<img src="img/logo/Zenit-logo-wh-tr.svg" alt="">
 										</div>
 									</div>
+									<div data-spollers="480,max" class="person-stats-chart__spollers">
+										<div class="person-stats-chart__spollers-item">
+											<button type="button" data-spoller class="person-stats-chart__spollers-title"></button>
+											<div class="person-stats-chart__spollers-body">
+												<div class="person-stats__nav">
+													<form action="#" class="person-stats__form-1">
+
+														<div class="person-stats__box">
+															<label class="person-stats__label" for="select-team">выбрать
+																соперника</label>
+															<select data-label data-scroll data-show name="form[]" id="select-team" class="person-stats__list">
+																<option class="person-stats__item" value="1" selected="selected">все
+																	команды</option>
+																<option class="person-stats__item" value="2">ЦСКА</option>
+																<option class="person-stats__item" value="3">Локомотив Кубань</option>
+																<option class="person-stats__item" value="4">Уникс</option>
+																<option class="person-stats__item" value="5">Пари Парма</option>
+																<option class="person-stats__item" value="6">Самара</option>
+															</select>
+														</div>
+														<div class="person-stats__box">
+															<label class="person-stats__label" for="type-stats">показать</label>
+															<select data-label data-scroll data-show name="form[]" id="type-stats" class="person-stats__list">
+																<option class="person-stats__item" value="1" selected="selected">
+																	последние 5 игр</option>
+																<option data-label class="person-stats__item" value="2">последние 10 игр
+																</option>
+																<option data-label class="person-stats__item" value="3">все игры
+																</option>
+															</select>
+														</div>
+
+													</form>
+
+												</div>
+											</div>
+										</div>
+									</div>
 									<div data-showmore class="block">
-										<div data-showmore-content="290" class="block__content">
+										<div data-showmore-content="255" class="block__content">
 											<div class="person-stats-chart__table">
 												<div class="table__box">
 													<table class="table-fill">
@@ -739,6 +822,7 @@
 											<span>Скрыть</span></button>
 									</div>
 								</div>
+								<!-- PROFILE CAREER -->
 								<div id="tab_3" class="tabs__body tab__body team-roster__tab-body b-tab">
 									<h2 class="section-title-h2w element-animation">Карьера</h2>
 
@@ -870,6 +954,7 @@
 										Карьера и Биография
 									</div> -->
 								</div>
+								<!-- PROFILE ARHIEVEMENTS -->
 								<div id="tab_4" class="tabs__body tab__body team-roster__tab-body b-tab">
 									<h2 class="section-title-h2w element-animation">Достижения</h2>
 									<div class="timeline">
@@ -971,126 +1056,11 @@
 									</div> -->
 
 								</div>
+								<!-- PROFILE PHOTO -->
 								<div id="tab_5" class="tabs__body tab__body team-roster__tab-body b-tab">
 									<h2 class="section-title-h2w element-animation">фото</h2>
-									<!-- TAB SLIDER - TEAM ROSTER-->
-									<div class="team-slider">
-										<div class="swiper-wrapper team-slider__wrapper">
-											<!-- <img class="team-slider__bg-logo" src="img/logo/Zenit-logo-bc-tr.svg" alt=""> -->
-											<div class="team-slider__item swiper-slide">
-												<div class="player-card__body team-roster__tab-item">
-													<div class="player-card__mini-logo -ibg">
-														<img src="img/logo/zenit-bl.svg" alt="">
-													</div>
-													<h3 class="player-card__number">#9</h3>
-													<div class="player-card__social">
-														<a class="player-card__logo -ibg">
-															<img src="img/logo/zenit-wh.svg" alt="">
-														</a>
-													</div>
 
-													<div class="player-card__photo -ibg">
-														<picture><source data-srcset="img/player/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/player/4.png" alt=""></picture>
-													</div>
-													<div class="player-card__content">
-														<h3 class="player-card__title">Кулагин</h3>
-														<h3 class="player-card__title">Дмитрий</h3>
-														<span>разыгрывающий</span>
-														<p>18.03.1992</p>
-														<p>Россия</p>
-														<p>298 см / 94 кг</p>
-													</div>
-												</div>
-											</div>
-											<div class="team-slider__item swiper-slide">
-												<div class="player-card__body team-roster__tab-item">
-													<div class="player-card__mini-logo -ibg">
-														<img src="img/logo/zenit-bl.svg" alt="">
-													</div>
-													<h3 class="player-card__number">#7</h3>
-													<div class="player-card__social">
-														<a class="player-card__logo -ibg">
-															<img src="img/logo/zenit-wh.svg" alt="">
-														</a>
-													</div>
-
-													<div class="player-card__photo -ibg">
-														<picture><source srcset="img/player/3.webp" type="image/webp"><img src="img/player/3.png" alt=""></picture>
-													</div>
-													<div class="player-card__content">
-
-
-														<h3 class="player-card__title">Карасев</h3>
-														<h3 class="player-card__title">Сергей</h3>
-														<span>легкий форвард</span>
-														<p>24.09.1993</p>
-														<p>Россия</p>
-														<p>202 см / 101 кг</p>
-													</div>
-												</div>
-											</div>
-											<div class="team-slider__item swiper-slide">
-												<div class="player-card__body team-roster__tab-item">
-													<div class="player-card__mini-logo -ibg">
-														<img src="img/logo/zenit-bl.svg" alt="">
-													</div>
-													<h3 class="player-card__number">#20</h3>
-													<div class="player-card__social">
-														<a class="player-card__logo -ibg">
-															<img src="img/logo/zenit-wh.svg" alt="">
-														</a>
-													</div>
-
-													<div class="player-card__photo -ibg">
-														<picture><source data-srcset="img/player/5.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/player/5.png" alt=""></picture>
-													</div>
-													<div class="player-card__content">
-														<h3 class="player-card__title">Зубков</h3>
-														<h3 class="player-card__title">Андрей</h3>
-														<span>легкий форвард</span>
-														<p>24.09.1987</p>
-														<p>Россия</p>
-														<p>202 см / 101 кг</p>
-													</div>
-												</div>
-											</div>
-											<div class="team-slider__item swiper-slide">
-												<div class="player-card__body team-roster__tab-item">
-													<div class="player-card__mini-logo -ibg">
-														<img src="img/logo/zenit-bl.svg" alt="">
-													</div>
-													<h3 class="player-card__number">#10</h3>
-													<div class="player-card__social">
-														<a class="player-card__logo -ibg">
-															<img src="img/logo/zenit-wh.svg" alt="">
-														</a>
-													</div>
-
-													<div class="player-card__photo -ibg">
-														<picture><source data-srcset="img/player/6.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/player/6.png" alt=""></picture>
-													</div>
-													<div class="player-card__content">
-														<h3 class="player-card__title">Рыжов</h3>
-														<h3 class="player-card__title">Егор</h3>
-														<span>тяжелый форвард</span>
-														<p>24.05.2004</p>
-														<p>Россия</p>
-														<p>207 см / 99 кг</p>
-													</div>
-												</div>
-											</div>
-
-										</div>
-										<div class="team-slider__pagination swiper-pagination"></div>
-										<div class="team-slider__navigation">
-											<div class="team-slider__nav-prev -ibg">
-												<img src="img/icon/prev1.svg" alt="">
-											</div>
-											<div class="team-slider__nav-next -ibg">
-												<img src="img/icon/next1.svg" alt="">
-											</div>
-										</div>
-									</div>
+									<div id="inline-gallery-container" class="inline-gallery-container"></div>
 								</div>
 							</div>
 						</div>
@@ -1676,9 +1646,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20220831035241"></script>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js?_v=20220831035241"></script>
-	<script src="js/app.min.js?_v=20220831035241"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20220901020532"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js?_v=20220901020532"></script>
+	<script src="js/app.min.js?_v=20220901020532"></script>
 </body>
 
 </html>

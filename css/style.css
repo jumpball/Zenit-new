@@ -4108,6 +4108,7 @@ td.table-footer {
 }
 
 .person-stats-chart__body {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4128,7 +4129,6 @@ td.table-footer {
 .person-stats-chart__spollers {
   display: -ms-grid;
   display: grid;
-  gap: 15px;
 }
 
 .person-stats-chart__spollers-item {
@@ -4144,17 +4144,21 @@ td.table-footer {
 
 ._spoller-init .person-stats-chart__spollers-title {
   cursor: pointer;
+  border: 1px solid #ffffff;
+  padding: 1.25rem 0.9375rem;
+  border-radius: 0.1875rem;
+  margin-bottom: 0.625rem;
 }
 
-._spoller-init .person-stats-chart__spollers-title::before,
 ._spoller-init .person-stats-chart__spollers-title::after {
   content: "";
   position: absolute;
-  right: 10px;
-  top: 50%;
-  background-color: #ffffff;
-  height: 2px;
-  width: 15px;
+  top: 0.9375rem;
+  height: 0;
+  width: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid #ffffff;
   -webkit-transition: -webkit-transform 0.5s ease 0s;
   transition: -webkit-transform 0.5s ease 0s;
   -o-transition: transform 0.5s ease 0s;
@@ -4162,33 +4166,34 @@ td.table-footer {
   transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
 }
 
-._spoller-init .person-stats-chart__spollers-title::before {
-  -webkit-transform: translate(-75%, -50%) rotate(40deg);
-      -ms-transform: translate(-75%, -50%) rotate(40deg);
-          transform: translate(-75%, -50%) rotate(40deg);
-}
-
 ._spoller-init .person-stats-chart__spollers-title::after {
-  -webkit-transform: translate(0, -50%) rotate(-40deg);
-      -ms-transform: translate(0, -50%) rotate(-40deg);
-          transform: translate(0, -50%) rotate(-40deg);
+  right: 0.75rem;
 }
 
 ._spoller-init .person-stats-chart__spollers-title._spoller-active::before {
-  -webkit-transform: translateX(-75%) rotate(-40deg);
-      -ms-transform: translateX(-75%) rotate(-40deg);
-          transform: translateX(-75%) rotate(-40deg);
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 ._spoller-init .person-stats-chart__spollers-title._spoller-active::after {
-  -webkit-transform: rotate(40deg);
-      -ms-transform: rotate(40deg);
-          transform: rotate(40deg);
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .person-stats-chart__table {
   position: relative;
-  margin-top: 2.5rem;
   width: 100%;
   overflow-x: auto;
 }
@@ -4197,58 +4202,58 @@ td.table-footer {
   position: absolute;
 }
 
-@supports (top: clamp( 40rem , 36.9409517779rem  +  4.9340482221vw , 41.875rem )) {
+@supports (top: clamp( 12.5rem , 0.2638071116rem  +  19.7361928884vw , 20rem )) {
   .person-stats-chart__bg-logo {
-    top: clamp( 40rem , 36.9409517779rem  +  4.9340482221vw , 41.875rem );
+    top: clamp( 12.5rem , 0.2638071116rem  +  19.7361928884vw , 20rem );
   }
 }
 
-@supports not (top: clamp( 40rem , 36.9409517779rem  +  4.9340482221vw , 41.875rem )) {
+@supports not (top: clamp( 12.5rem , 0.2638071116rem  +  19.7361928884vw , 20rem )) {
   .person-stats-chart__bg-logo {
-    top: calc(40rem + 1.875 * (100vw - 61.99875rem) / 38.00125);
+    top: calc(12.5rem + 7.5 * (100vw - 61.99875rem) / 38.00125);
   }
 }
 
-@supports (right: clamp( 6.25rem , -3.946827407rem  +  16.446827407vw , 12.5rem )) {
+@supports (right: clamp( 6.25rem , 0.1319035558rem  +  9.8680964442vw , 10rem )) {
   .person-stats-chart__bg-logo {
-    right: clamp( 6.25rem , -3.946827407rem  +  16.446827407vw , 12.5rem );
+    right: clamp( 6.25rem , 0.1319035558rem  +  9.8680964442vw , 10rem );
   }
 }
 
-@supports not (right: clamp( 6.25rem , -3.946827407rem  +  16.446827407vw , 12.5rem )) {
+@supports not (right: clamp( 6.25rem , 0.1319035558rem  +  9.8680964442vw , 10rem )) {
   .person-stats-chart__bg-logo {
-    right: calc(6.25rem + 6.25 * (100vw - 61.99875rem) / 38.00125);
+    right: calc(6.25rem + 3.75 * (100vw - 61.99875rem) / 38.00125);
   }
 }
 
-@supports (width: clamp( 25rem , 4.606345186rem  +  32.893654814vw , 37.5rem )) {
+@supports (width: clamp( 21rem , -0.4133375547rem  +  34.5383375547vw , 34.125rem )) {
   .person-stats-chart__bg-logo {
-    width: clamp( 25rem , 4.606345186rem  +  32.893654814vw , 37.5rem );
+    width: clamp( 21rem , -0.4133375547rem  +  34.5383375547vw , 34.125rem );
   }
 }
 
-@supports not (width: clamp( 25rem , 4.606345186rem  +  32.893654814vw , 37.5rem )) {
+@supports not (width: clamp( 21rem , -0.4133375547rem  +  34.5383375547vw , 34.125rem )) {
   .person-stats-chart__bg-logo {
-    width: calc(25rem + 12.5 * (100vw - 61.99875rem) / 38.00125);
+    width: calc(21rem + 13.125 * (100vw - 61.99875rem) / 38.00125);
   }
 }
 
-@supports (height: clamp( 11.9375rem , 2.2505139634rem  +  15.6244860366vw , 17.875rem )) {
+@supports (height: clamp( 10rem , -0.196827407rem  +  16.446827407vw , 16.25rem )) {
   .person-stats-chart__bg-logo {
-    height: clamp( 11.9375rem , 2.2505139634rem  +  15.6244860366vw , 17.875rem );
+    height: clamp( 10rem , -0.196827407rem  +  16.446827407vw , 16.25rem );
   }
 }
 
-@supports not (height: clamp( 11.9375rem , 2.2505139634rem  +  15.6244860366vw , 17.875rem )) {
+@supports not (height: clamp( 10rem , -0.196827407rem  +  16.446827407vw , 16.25rem )) {
   .person-stats-chart__bg-logo {
-    height: calc(11.9375rem + 5.9375 * (100vw - 61.99875rem) / 38.00125);
+    height: calc(10rem + 6.25 * (100vw - 61.99875rem) / 38.00125);
   }
 }
 
 .person-stats-chart__content {
   position: relative;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -4267,6 +4272,7 @@ td.table-footer {
 
 .person-stats-chart__item {
   position: relative;
+  padding: 0px 0px 6px 0px;
 }
 
 @supports (width: clamp( 11.125rem , -1.3151294365rem  +  20.0651294365vw , 18.75rem )) {
@@ -4472,7 +4478,7 @@ td.table-footer {
 }
 
 .person-stats-chart__stats-ft::before {
-  content: "штрафные";
+  content: "шт";
   font-weight: 500;
   position: absolute;
   left: 0;
@@ -4541,6 +4547,7 @@ td.table-footer {
   min-width: 25rem;
   height: auto;
   overflow: hidden;
+  background-color: #71a6dc;
 }
 
 @supports (width: clamp( 25rem , -0.4920685175rem  +  41.1170685175vw , 40.625rem )) {
@@ -4567,38 +4574,38 @@ td.table-footer {
 }
 
 .person-stats-chart__part-corner {
-  fill: rgb(255, 205, 86);
-  opacity: 0.1;
+  fill: #ffffff;
+  opacity: 0.5;
 }
 
 .person-stats-chart__part-short-corner {
-  fill: rgb(255, 205, 86);
-  opacity: 0.2;
+  fill: #ffffff;
+  opacity: 0.3;
 }
 
 .person-stats-chart__part-short-wing {
-  fill: rgb(255, 205, 86);
-  opacity: 0.1;
+  fill: #ffffff;
+  opacity: 0.5;
 }
 
 .person-stats-chart__part-3pt-wing {
-  fill: rgb(255, 205, 86);
-  opacity: 0.2;
+  fill: #ffffff;
+  opacity: 0.3;
 }
 
 .person-stats-chart__part-3pt-top {
-  fill: rgb(255, 205, 86);
-  opacity: 0.1;
+  fill: #ffffff;
+  opacity: 0.5;
 }
 
 .person-stats-chart__part-top {
-  fill: rgb(255, 205, 86);
-  opacity: 0.2;
+  fill: #ffffff;
+  opacity: 0.3;
 }
 
 .person-stats-chart__part-paint {
-  fill: rgb(255, 205, 86);
-  opacity: 0.3;
+  fill: #ffffff;
+  opacity: 0.5;
 }
 
 .paint-shoting-percent {
@@ -5705,6 +5712,30 @@ td.table-footer {
   }
 }
 
+.person-stats__form-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@supports (gap: clamp( 1.25rem , -1.1258699339rem  +  5.8482952219vw , 2.5rem )) {
+  .person-stats__form-1 {
+    gap: clamp( 1.25rem , -1.1258699339rem  +  5.8482952219vw , 2.5rem );
+  }
+}
+
+@supports not (gap: clamp( 1.25rem , -1.1258699339rem  +  5.8482952219vw , 2.5rem )) {
+  .person-stats__form-1 {
+    gap: calc(1.25rem + 1.25 * (100vw - 40.625rem) / 21.37375);
+  }
+}
+
 .person-stats__box {
   width: 100%;
 }
@@ -5742,9 +5773,10 @@ td.table-footer {
   border: 0.0625rem solid #ffffff;
   border-radius: 0.1875rem;
   width: 100%;
+  position: relative;
   background-color: #ffffff;
   cursor: pointer;
-  color: inherit;
+  color: #71a6dc;
   text-align: left;
 }
 
@@ -5768,30 +5800,30 @@ td.table-footer {
 
 .select__value:after {
   content: "";
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 10px;
-          flex: 0 0 10px;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: absolute;
+  top: 0.9375rem;
+  right: 0.625rem;
+  height: 0;
+  width: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid #71a6dc;
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
 }
 
 ._select-open .select__value:after {
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
 }
 
 .select__value._select-pseudo-label::before {
@@ -5859,7 +5891,7 @@ td.table-footer {
   width: 100%;
   text-align: left;
   cursor: pointer;
-  padding: 5px 12px;
+  padding: 8px 12px;
   color: inherit;
 }
 
@@ -5925,6 +5957,87 @@ td.table-footer {
   -webkit-transition: all 2s ease 0s;
   -o-transition: all 2s ease 0s;
   transition: all 2s ease 0s;
+}
+
+.inline-gallery-container {
+  width: 100%;
+  position: relative;
+}
+
+@supports (height: clamp( 37.5rem , 17.106345186rem  +  32.893654814vw , 50rem )) {
+  .inline-gallery-container {
+    height: clamp( 37.5rem , 17.106345186rem  +  32.893654814vw , 50rem );
+  }
+}
+
+@supports not (height: clamp( 37.5rem , 17.106345186rem  +  32.893654814vw , 50rem )) {
+  .inline-gallery-container {
+    height: calc(37.5rem + 12.5 * (100vw - 61.99875rem) / 38.00125);
+  }
+}
+
+.lightGallery-captions h4 {
+  -webkit-transform: translate3d(60px, 0, 0px);
+          transform: translate3d(60px, 0, 0px);
+}
+
+.lightGallery-captions p {
+  -webkit-transform: translate3d(-60px, 0, 0px);
+          transform: translate3d(-60px, 0, 0px);
+}
+
+.lightGallery-captions h4,
+.lightGallery-captions p {
+  opacity: 0;
+}
+
+.lg-current .lightGallery-captions h4,
+.lg-current .lightGallery-captions p {
+  -webkit-transform: translate3d(0, 0, 0px);
+          transform: translate3d(0, 0, 0px);
+}
+
+.lg-current .lightGallery-captions h4,
+.lg-current .lightGallery-captions p {
+  opacity: 1;
+}
+
+.lg-slide-progress .lightGallery-captions h4 {
+  -webkit-transform: translate3d(-60px, 0, 0px);
+          transform: translate3d(-60px, 0, 0px);
+}
+
+.lg-slide-progress .lightGallery-captions p {
+  -webkit-transform: translate3d(60px, 0, 0px);
+          transform: translate3d(60px, 0, 0px);
+}
+
+.lg-slide-progress .lightGallery-captions h4,
+.lg-slide-progress .lightGallery-captions p {
+  opacity: 0;
+}
+
+.lightGallery-captions h4,
+.lightGallery-captions p {
+  -webkit-transition: opacity 0.4s ease-in, -webkit-transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in, -webkit-transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out, opacity 0.4s ease-in;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in, -webkit-transform 0.4s ease-in-out;
+}
+
+.lg-current .lightGallery-captions h4,
+.lg-current .lightGallery-captions p {
+  -webkit-transition-delay: 500ms;
+       -o-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+
+.lg-current.lg-slide-progress .lightGallery-captions h4,
+.lg-current.lg-slide-progress .lightGallery-captions p {
+  -webkit-transition-delay: 0ms;
+       -o-transition-delay: 0ms;
+          transition-delay: 0ms;
 }
 
 .header {
@@ -6032,6 +6145,14 @@ td.table-footer {
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
+}
+
+.header__form-select-lang .select__value::after {
+  border: none;
+}
+
+.header__form-select-lang .select__title {
+  color: #ffffff;
 }
 
 .header._header-scroll .header__form-select-lang {
@@ -8806,6 +8927,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-flex: 1,;
         -ms-flex: 1, 1, auto;
             flex: 1, 1, auto;
+    min-width: 17rem;
   }
 
 @supports (width: clamp( 2.625rem , 0.9107589286rem  +  3.5714285714vw , 3.125rem )) {
@@ -10033,17 +10155,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin: 0px 0px 20px 0px;
   }
 
-@supports (width: clamp( 9.75rem , -1.2589523349rem  +  33.8736994919vw , 15rem )) {
+@supports (width: clamp( 7.625rem , -0.821700933rem  +  32.9627353483vw , 15rem )) {
     .person-stats-chart__item {
-      width: clamp( 9.75rem , -1.2589523349rem  +  33.8736994919vw , 15rem );
+      width: clamp( 7.625rem , -0.821700933rem  +  32.9627353483vw , 15rem );
     }
 }
 
-@supports not (width: clamp( 9.75rem , -1.2589523349rem  +  33.8736994919vw , 15rem )) {
+@supports not (width: clamp( 7.625rem , -0.821700933rem  +  32.9627353483vw , 15rem )) {
     .person-stats-chart__item {
-      width: calc(9.75rem + 5.25 * (100vw - 32.5rem) / 15.49875);
+      width: calc(7.625rem + 7.375 * (100vw - 25.625rem) / 22.37375);
     }
 }
 
@@ -11095,12 +11218,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: none;
   }
 
-  .person-stats-chart__spollers-title {
-    border: 1px solid #ffffff;
-    padding: 1.25rem 0.9375rem;
-    border-radius: 0.1875rem 0.1875rem 0px 0px;
-  }
-
   .person-stats__form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -11270,6 +11387,42 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .video-tabs__item {
     height: 15.625rem;
   }
+
+@supports (font-size: clamp( 1.0625rem , -0.3173076923rem  +  5.3846153846vw , 1.5rem )) {
+    .person-stats-chart__stats-2pt {
+      font-size: clamp( 1.0625rem , -0.3173076923rem  +  5.3846153846vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.0625rem , -0.3173076923rem  +  5.3846153846vw , 1.5rem )) {
+    .person-stats-chart__stats-2pt {
+      font-size: calc(1.0625rem + 0.4375 * (100vw - 25.625rem) / 8.125);
+    }
+}
+
+@supports (font-size: clamp( 1.0625rem , -0.3173076923rem  +  5.3846153846vw , 1.5rem )) {
+    .person-stats-chart__stats-3pt {
+      font-size: clamp( 1.0625rem , -0.3173076923rem  +  5.3846153846vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.0625rem , -0.3173076923rem  +  5.3846153846vw , 1.5rem )) {
+    .person-stats-chart__stats-3pt {
+      font-size: calc(1.0625rem + 0.4375 * (100vw - 25.625rem) / 8.125);
+    }
+}
+
+@supports (font-size: clamp( 1.0625rem , -0.3173076923rem  +  5.3846153846vw , 1.5rem )) {
+    .person-stats-chart__stats-ft {
+      font-size: clamp( 1.0625rem , -0.3173076923rem  +  5.3846153846vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.0625rem , -0.3173076923rem  +  5.3846153846vw , 1.5rem )) {
+    .person-stats-chart__stats-ft {
+      font-size: calc(1.0625rem + 0.4375 * (100vw - 25.625rem) / 8.125);
+    }
+}
 }
 
 @media (max-width: 32.5rem) {
@@ -11278,221 +11431,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     line-height: 1.5rem;
     margin: 0 0.3125rem;
   }
-
-  .person-stats-chart__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-@supports (width: clamp( 16.875rem , -3.125rem  +  100vw , 29.375rem )) {
-    .person-stats-chart__item {
-      width: clamp( 16.875rem , -3.125rem  +  100vw , 29.375rem );
-    }
-}
-
-@supports not (width: clamp( 16.875rem , -3.125rem  +  100vw , 29.375rem )) {
-    .person-stats-chart__item {
-      width: calc(16.875rem + 12.5 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (font-size: clamp( 1.875rem , -1.125rem  +  15vw , 3.75rem )) {
-    .person-stats-chart__stats-2pt {
-      font-size: clamp( 1.875rem , -1.125rem  +  15vw , 3.75rem );
-    }
-}
-
-@supports not (font-size: clamp( 1.875rem , -1.125rem  +  15vw , 3.75rem )) {
-    .person-stats-chart__stats-2pt {
-      font-size: calc(1.875rem + 1.875 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem )) {
-    .person-stats-chart__stats-2pt::before {
-      font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem );
-    }
-}
-
-@supports not (font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem )) {
-    .person-stats-chart__stats-2pt::before {
-      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (top: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem )) {
-    .person-stats-chart__stats-2pt::before {
-      top: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem );
-    }
-}
-
-@supports not (top: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem )) {
-    .person-stats-chart__stats-2pt::before {
-      top: calc(-1rem + -0.25 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem )) {
-    .person-stats-chart__stats-2pt::after {
-      font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem );
-    }
-}
-
-@supports not (font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem )) {
-    .person-stats-chart__stats-2pt::after {
-      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (bottom: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem )) {
-    .person-stats-chart__stats-2pt::after {
-      bottom: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem );
-    }
-}
-
-@supports not (bottom: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem )) {
-    .person-stats-chart__stats-2pt::after {
-      bottom: calc(-1rem + -0.25 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (font-size: clamp( 1.875rem , -1.125rem  +  15vw , 3.75rem )) {
-    .person-stats-chart__stats-3pt {
-      font-size: clamp( 1.875rem , -1.125rem  +  15vw , 3.75rem );
-    }
-}
-
-@supports not (font-size: clamp( 1.875rem , -1.125rem  +  15vw , 3.75rem )) {
-    .person-stats-chart__stats-3pt {
-      font-size: calc(1.875rem + 1.875 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem )) {
-    .person-stats-chart__stats-3pt::before {
-      font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem );
-    }
-}
-
-@supports not (font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem )) {
-    .person-stats-chart__stats-3pt::before {
-      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (top: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem )) {
-    .person-stats-chart__stats-3pt::before {
-      top: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem );
-    }
-}
-
-@supports not (top: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem )) {
-    .person-stats-chart__stats-3pt::before {
-      top: calc(-1rem + -0.25 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem )) {
-    .person-stats-chart__stats-3pt::after {
-      font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem );
-    }
-}
-
-@supports not (font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem )) {
-    .person-stats-chart__stats-3pt::after {
-      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (bottom: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem )) {
-    .person-stats-chart__stats-3pt::after {
-      bottom: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem );
-    }
-}
-
-@supports not (bottom: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem )) {
-    .person-stats-chart__stats-3pt::after {
-      bottom: calc(-1rem + -0.25 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (font-size: clamp( 1.875rem , -1.125rem  +  15vw , 3.75rem )) {
-    .person-stats-chart__stats-ft {
-      font-size: clamp( 1.875rem , -1.125rem  +  15vw , 3.75rem );
-    }
-}
-
-@supports not (font-size: clamp( 1.875rem , -1.125rem  +  15vw , 3.75rem )) {
-    .person-stats-chart__stats-ft {
-      font-size: calc(1.875rem + 1.875 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem )) {
-    .person-stats-chart__stats-ft::before {
-      font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem );
-    }
-}
-
-@supports not (font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem )) {
-    .person-stats-chart__stats-ft::before {
-      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (top: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem )) {
-    .person-stats-chart__stats-ft::before {
-      top: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem );
-    }
-}
-
-@supports not (top: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem )) {
-    .person-stats-chart__stats-ft::before {
-      top: calc(-1rem + -0.25 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem )) {
-    .person-stats-chart__stats-ft::after {
-      font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem );
-    }
-}
-
-@supports not (font-size: clamp( 1rem , 0.2rem  +  4vw , 1.5rem )) {
-    .person-stats-chart__stats-ft::after {
-      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 12.5);
-    }
-}
-
-@supports (bottom: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem )) {
-    .person-stats-chart__stats-ft::after {
-      bottom: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem );
-    }
-}
-
-@supports not (bottom: clamp( -1.25rem , -0.6rem  +  -2vw , -1rem )) {
-    .person-stats-chart__stats-ft::after {
-      bottom: calc(-1rem + -0.25 * (100vw - 20rem) / 12.5);
-    }
-}
-
-  .person-stats-chart__image {
-    min-width: 17rem;
-  }
-
-@supports (width: clamp( 17rem , -2.8rem  +  99vw , 29.375rem )) {
-    .person-stats-chart__image {
-      width: clamp( 17rem , -2.8rem  +  99vw , 29.375rem );
-    }
-}
-
-@supports not (width: clamp( 17rem , -2.8rem  +  99vw , 29.375rem )) {
-    .person-stats-chart__image {
-      width: calc(17rem + 12.375 * (100vw - 20rem) / 12.5);
-    }
-}
 }
 
 @media (max-width: 31.25rem) {
@@ -11527,6 +11465,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     font-size: 0.625rem;
     line-height: 1.125rem;
     min-width: 3.125rem;
+  }
+
+  .person-stats__form-1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.625rem;
   }
 }
 
@@ -11567,6 +11513,205 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .video-tabs__item {
     height: auto;
   }
+
+  .person-stats-chart__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+@supports (width: clamp( 16.875rem , -3.125rem  +  100vw , 22.5rem )) {
+    .person-stats-chart__item {
+      width: clamp( 16.875rem , -3.125rem  +  100vw , 22.5rem );
+    }
+}
+
+@supports not (width: clamp( 16.875rem , -3.125rem  +  100vw , 22.5rem )) {
+    .person-stats-chart__item {
+      width: calc(16.875rem + 5.625 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (font-size: clamp( 2.125rem , -2.3194444444rem  +  22.2222222222vw , 3.375rem )) {
+    .person-stats-chart__stats-2pt {
+      font-size: clamp( 2.125rem , -2.3194444444rem  +  22.2222222222vw , 3.375rem );
+    }
+}
+
+@supports not (font-size: clamp( 2.125rem , -2.3194444444rem  +  22.2222222222vw , 3.375rem )) {
+    .person-stats-chart__stats-2pt {
+      font-size: calc(2.125rem + 1.25 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem )) {
+    .person-stats-chart__stats-2pt::before {
+      font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem )) {
+    .person-stats-chart__stats-2pt::before {
+      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (top: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem )) {
+    .person-stats-chart__stats-2pt::before {
+      top: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem );
+    }
+}
+
+@supports not (top: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem )) {
+    .person-stats-chart__stats-2pt::before {
+      top: calc(-1rem + -0.25 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem )) {
+    .person-stats-chart__stats-2pt::after {
+      font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem )) {
+    .person-stats-chart__stats-2pt::after {
+      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (bottom: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem )) {
+    .person-stats-chart__stats-2pt::after {
+      bottom: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem );
+    }
+}
+
+@supports not (bottom: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem )) {
+    .person-stats-chart__stats-2pt::after {
+      bottom: calc(-1rem + -0.25 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (font-size: clamp( 2.125rem , -2.3194444444rem  +  22.2222222222vw , 3.375rem )) {
+    .person-stats-chart__stats-3pt {
+      font-size: clamp( 2.125rem , -2.3194444444rem  +  22.2222222222vw , 3.375rem );
+    }
+}
+
+@supports not (font-size: clamp( 2.125rem , -2.3194444444rem  +  22.2222222222vw , 3.375rem )) {
+    .person-stats-chart__stats-3pt {
+      font-size: calc(2.125rem + 1.25 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem )) {
+    .person-stats-chart__stats-3pt::before {
+      font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem )) {
+    .person-stats-chart__stats-3pt::before {
+      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (top: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem )) {
+    .person-stats-chart__stats-3pt::before {
+      top: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem );
+    }
+}
+
+@supports not (top: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem )) {
+    .person-stats-chart__stats-3pt::before {
+      top: calc(-1rem + -0.25 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem )) {
+    .person-stats-chart__stats-3pt::after {
+      font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem )) {
+    .person-stats-chart__stats-3pt::after {
+      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (bottom: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem )) {
+    .person-stats-chart__stats-3pt::after {
+      bottom: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem );
+    }
+}
+
+@supports not (bottom: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem )) {
+    .person-stats-chart__stats-3pt::after {
+      bottom: calc(-1rem + -0.25 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (font-size: clamp( 2.125rem , -2.3194444444rem  +  22.2222222222vw , 3.375rem )) {
+    .person-stats-chart__stats-ft {
+      font-size: clamp( 2.125rem , -2.3194444444rem  +  22.2222222222vw , 3.375rem );
+    }
+}
+
+@supports not (font-size: clamp( 2.125rem , -2.3194444444rem  +  22.2222222222vw , 3.375rem )) {
+    .person-stats-chart__stats-ft {
+      font-size: calc(2.125rem + 1.25 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem )) {
+    .person-stats-chart__stats-ft::before {
+      font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem )) {
+    .person-stats-chart__stats-ft::before {
+      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (top: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem )) {
+    .person-stats-chart__stats-ft::before {
+      top: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem );
+    }
+}
+
+@supports not (top: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem )) {
+    .person-stats-chart__stats-ft::before {
+      top: calc(-1rem + -0.25 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem )) {
+    .person-stats-chart__stats-ft::after {
+      font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , -0.7777777778rem  +  8.8888888889vw , 1.5rem )) {
+    .person-stats-chart__stats-ft::after {
+      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 5.625);
+    }
+}
+
+@supports (bottom: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem )) {
+    .person-stats-chart__stats-ft::after {
+      bottom: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem );
+    }
+}
+
+@supports not (bottom: clamp( -1.25rem , -0.1111111111rem  +  -4.4444444444vw , -1rem )) {
+    .person-stats-chart__stats-ft::after {
+      bottom: calc(-1rem + -0.25 * (100vw - 20rem) / 5.625);
+    }
+}
 }
 
 @media (max-width: 21.875rem) {
