@@ -7,8 +7,8 @@
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20220902220652">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220902220652">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20220907192213">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220907192213">
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
@@ -612,9 +612,23 @@
 
 														</div>
 													</div>
+													<!-- <div class="person-stats-chart__item-1">
+					<canvas id="box" height="230px" width="900px"></canvas>
+				</div> -->
+
 												</div>
 											</div>
 										</div>
+
+										<div class="person-stats-chart__box">
+
+											<!-- <div class="person-stats-chart__info">
+			<div class="person-stats-chart__stats">
+				<div class="person-stats-chart__stats-3pt">37.6%</div>
+			</div>
+		</div> -->
+										</div>
+
 										<div class="person-stats-chart__bg-logo -ibg">
 											<img src="img/logo/Zenit-logo-wh-tr.svg" alt="">
 										</div>
@@ -659,6 +673,7 @@
 									</div>
 									<div data-showmore class="block">
 										<div data-showmore-content="255" class="block__content">
+
 											<div class="person-stats-chart__table">
 												<div class="table__box">
 													<table class="table-fill">
@@ -815,6 +830,9 @@
 
 
 
+											</div>
+											<div class="person-stats-chart__item-1">
+												<canvas id="box"></canvas>
 											</div>
 										</div>
 										<button hidden data-showmore-button type="button" class="block__more publication-selector__btn">
@@ -1051,72 +1069,73 @@
 
 
 									</div>
-									<!-- <div class="team-box">
-										Достижения и рекорды
-									</div> -->
-
 								</div>
 								<!-- PROFILE PHOTO -->
 								<div id="tab_5" class="tabs__body tab__body team-roster__tab-body b-tab">
 									<h2 class="section-title-h2w element-animation">фото</h2>
 									<!-- PROFILE PHOTO -->
+									<div data-showmore data-showmore-media="560,max" class="block">
+										<div data-showmore-content="460" class="block__content">
+											<div id="person-gallery" class="person-gallery__box">
 
-									<div id="person-gallery" class="person-gallery__box">
+												<div class="gallery">
+													<div class="person-gallery__item gallery__item gallery__item--1" data-src="img/profile/1.jpg">
+														<a href="#" class="gallery__link">
+															<picture><source srcset="img/profile/1.webp" type="image/webp"><img src="img/profile/1.jpg" class="gallery__image" /></picture>
+															<div class="gallery__overlay">
+																<span>Сергей Карасев</span>
+															</div>
+														</a>
+													</div>
+													<div class="person-gallery__item gallery__item gallery__item--2" data-src="img/profile/2.jpg">
+														<a href="#" class="gallery__link">
+															<picture><source srcset="img/profile/2.webp" type="image/webp"><img src="img/profile/2.jpg" class="gallery__image" /></picture>
+															<div class="gallery__overlay">
+																<span>Сергей Карасев</span>
+															</div>
+														</a>
+													</div>
+													<div class="person-gallery__item gallery__item gallery__item--3" data-src="img/profile/3.jpg">
+														<a href="#" class="gallery__link">
+															<picture><source srcset="img/profile/3.webp" type="image/webp"><img src="img/profile/3.jpg" class="gallery__image" /></picture>
+															<div class="gallery__overlay">
+																<span>Сергей Карасев</span>
+															</div>
+														</a>
+													</div>
+													<div class="person-gallery__item gallery__item gallery__item--4" data-src="img/profile/4.jpg">
+														<a href="#" class="gallery__link">
+															<picture><source srcset="img/profile/4.webp" type="image/webp"><img src="img/profile/4.jpg" class="gallery__image" /></picture>
+															<div class="gallery__overlay">
+																<span>Сергей Карасев</span>
+															</div>
+														</a>
+													</div>
+													<div class="person-gallery__item gallery__item gallery__item--5" data-src="img/profile/5.jpg">
+														<a href="#" class="gallery__link">
+															<picture><source srcset="img/profile/5.webp" type="image/webp"><img src="img/profile/5.jpg" class="gallery__image" /></picture>
+															<div class="gallery__overlay">
+																<span>Сергей Карасев</span>
+															</div>
+														</a>
+													</div>
+													<div class="person-gallery__item gallery__item gallery__item--6" data-src="img/profile/6.jpg">
+														<a href="#" class="gallery__link">
+															<picture><source srcset="img/profile/6.webp" type="image/webp"><img src="img/profile/6.jpg" class="gallery__image" /></picture>
+															<div class="gallery__overlay">
+																<span>Сергей Карасев</span>
+															</div>
+														</a>
+													</div>
+												</div>
 
-										<div class="gallery">
-											<div class="person-gallery__item gallery__item gallery__item--1" data-src="img/profile/1.jpg">
-												<a href="#" class="gallery__link">
-													<picture><source srcset="img/profile/1.webp" type="image/webp"><img src="img/profile/1.jpg" class="gallery__image" /></picture>
-													<div class="gallery__overlay">
-														<span>Сергей Карасев</span>
-													</div>
-												</a>
-											</div>
-											<div class="person-gallery__item gallery__item gallery__item--2" data-src="img/profile/2.jpg">
-												<a href="#" class="gallery__link">
-													<picture><source srcset="img/profile/2.webp" type="image/webp"><img src="img/profile/2.jpg" class="gallery__image" /></picture>
-													<div class="gallery__overlay">
-														<span>Сергей Карасев</span>
-													</div>
-												</a>
-											</div>
-											<div class="person-gallery__item gallery__item gallery__item--3" data-src="img/profile/3.jpg">
-												<a href="#" class="gallery__link">
-													<picture><source srcset="img/profile/3.webp" type="image/webp"><img src="img/profile/3.jpg" class="gallery__image" /></picture>
-													<div class="gallery__overlay">
-														<span>Сергей Карасев</span>
-													</div>
-												</a>
-											</div>
-											<div class="person-gallery__item gallery__item gallery__item--4" data-src="img/profile/4.jpg">
-												<a href="#" class="gallery__link">
-													<picture><source srcset="img/profile/4.webp" type="image/webp"><img src="img/profile/4.jpg" class="gallery__image" /></picture>
-													<div class="gallery__overlay">
-														<span>Сергей Карасев</span>
-													</div>
-												</a>
-											</div>
-											<div class="person-gallery__item gallery__item gallery__item--5" data-src="img/profile/5.jpg">
-												<a href="#" class="gallery__link">
-													<picture><source srcset="img/profile/5.webp" type="image/webp"><img src="img/profile/5.jpg" class="gallery__image" /></picture>
-													<div class="gallery__overlay">
-														<span>Сергей Карасев</span>
-													</div>
-												</a>
-											</div>
-											<div class="person-gallery__item gallery__item gallery__item--6" data-src="img/profile/6.jpg">
-												<a href="#" class="gallery__link">
-													<picture><source srcset="img/profile/6.webp" type="image/webp"><img src="img/profile/6.jpg" class="gallery__image" /></picture>
-													<div class="gallery__overlay">
-														<span>Сергей Карасев</span>
-													</div>
-												</a>
 											</div>
 										</div>
-
+										<button hidden data-showmore-button="1000" type="button" class="block__more publication-selector__btn">
+											<span>Показать еще</span>
+											<span>Скрыть</span>
+										</button>
 									</div>
-
-
 								</div>
 							</div>
 						</div>
@@ -1702,9 +1721,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20220902220652"></script>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js?_v=20220902220652"></script>
-	<script src="js/app.min.js?_v=20220902220652"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20220907192213"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js?_v=20220907192213"></script>
+	<script src="js/app.min.js?_v=20220907192213"></script>
 </body>
 
 </html>

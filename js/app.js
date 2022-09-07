@@ -17745,7 +17745,7 @@
                 if (stickyParents.length) stickyParents.forEach((stickyParent => {
                     let stickyConfig = {
                         media: stickyParent.dataset.sticky ? parseInt(stickyParent.dataset.sticky) : null,
-                        top: stickyParent.dataset.stickyTop ? parseInt(stickyParent.dataset.stickyTop) : 0,
+                        top: stickyParent.dataset.stickyTop ? parseInt(stickyParent.dataset.stickyTop) : 90,
                         bottom: stickyParent.dataset.stickyBottom ? parseInt(stickyParent.dataset.stickyBottom) : 0,
                         header: stickyParent.hasAttribute("data-sticky-header") ? document.querySelector("header.header").offsetHeight : 0
                     };
@@ -19765,6 +19765,44 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
             }
         });
+        new Swiper(".sidebar-calendar-slider", {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            loop: true,
+            autoplay: {
+                delay: 9e3,
+                stopOnLastSlide: false,
+                disableOnInteraction: false
+            },
+            mousewheel: {
+                invert: false
+            },
+            navigation: {
+                prevEl: ".team-slider__nav-prev",
+                nextEl: ".team-slider__nav-next"
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                650: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                880: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                991.98: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                }
+            }
+        });
         new Swiper(".head-slider", {
             slidesPerView: "auto",
             spaceBetween: 20,
@@ -19872,7 +19910,42 @@ PERFORMANCE OF THIS SOFTWARE.
                     spaceBetween: 20,
                     centeredSlides: false
                 },
-                992: {
+                991.98: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                }
+            }
+        });
+        new Swiper(".sidebar-banner-slider", {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            direction: "vertical",
+            autoplay: {
+                delay: 7e3,
+                stopOnLastSlide: false,
+                disableOnInteraction: false
+            },
+            loop: true,
+            slideToClickedSlide: true,
+            navigation: {
+                prevEl: ".banner-slider__nav-prev",
+                nextEl: ".banner-slider__nav-next"
+            },
+            breakpoints: {
+                300: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    direction: "horizontal"
+                },
+                600: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    direction: "horizontal"
+                },
+                991.98: {
                     slidesPerView: 3,
                     spaceBetween: 20
                 }
@@ -20086,7 +20159,7 @@ PERFORMANCE OF THIS SOFTWARE.
             data: [ 55.6, 44.4 ],
             borderColor: "rgba(255, 255, 255, 1)",
             borderWidth: 1,
-            backgroundColor: [ "#fec42f", "#ffffff" ]
+            backgroundColor: [ "#c0cb9b", "#ffffff" ]
         };
         if ($jsChart1) new Chart($jsChart1, {
             type: "doughnut",
@@ -20101,7 +20174,7 @@ PERFORMANCE OF THIS SOFTWARE.
             data: [ 37.9, 62.1 ],
             borderColor: "rgba(255, 255, 255, 1)",
             borderWidth: 1,
-            backgroundColor: [ "#fec42f", "#ffffff" ]
+            backgroundColor: [ "#ff9191", "#ffffff" ]
         };
         if ($jsChart2) new Chart($jsChart2, {
             type: "doughnut",
@@ -20116,7 +20189,7 @@ PERFORMANCE OF THIS SOFTWARE.
             data: [ 79.5, 21.5 ],
             borderColor: "rgba(255, 255, 255, 1)",
             borderWidth: 1,
-            backgroundColor: [ "#fec42f", "#ffffff" ]
+            backgroundColor: [ "#ffd28f", "#ffffff" ]
         };
         if ($jsChart3) new Chart($jsChart3, {
             type: "doughnut",
@@ -20126,18 +20199,25 @@ PERFORMANCE OF THIS SOFTWARE.
             options: {}
         });
         const $box = document.querySelector("#box");
-        const boxX = [ "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" ];
+        const boxX = [ "03.04", "08.04", "14.04", "19.04", "22.04" ];
         const boxY1 = {
-            label: "% 2-х очковых",
-            data: [ 55.6, 32.8, 55.6, 0, 35.6, 0, 52.6, 41.8, 20.6, 0, 12.3, 42.8 ],
-            backgroundColor: "#ccae61",
+            label: "2-х",
+            data: [ 55.6, 32.8, 35.6, 41.8, 20.6 ],
+            backgroundColor: "#c0cb9b",
             borderColor: "rgba(255, 255, 255, 1)",
             borderWidth: 1
         };
         const boxY2 = {
-            label: "% 3-х очковых",
-            data: [ 35.6, 42.8, 35.6, 22.8, 45.6, 23.8, 0, 21.8, 50.6, 30.8, 0, 22.8 ],
-            backgroundColor: "#146eb4",
+            label: "3-х",
+            data: [ 35.2, 42.8, 32.5, 22.8, 23.8 ],
+            backgroundColor: "#ff9191",
+            borderColor: "rgba(255, 255, 255, 1)",
+            borderWidth: 1
+        };
+        const boxY3 = {
+            label: "шт",
+            data: [ 87.2, 66.8, 72.5, 69.5, 77.2 ],
+            backgroundColor: " #ffd28f",
             borderColor: "rgba(255, 255, 255, 1)",
             borderWidth: 1
         };
@@ -20145,15 +20225,14 @@ PERFORMANCE OF THIS SOFTWARE.
             type: "bar",
             data: {
                 labels: boxX,
-                datasets: [ boxY1, boxY2 ]
+                datasets: [ boxY1, boxY2, boxY3 ]
             },
             options: {
                 scales: {
-                    yAxes: [ {
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    } ]
+                    y: {
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
                 }
             }
         });
